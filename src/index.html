@@ -1,150 +1,719 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Особенности проекта
-			</div>
-			<h2>Готовые страницы:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Главная</a></li>
-			</ol>
-			<h2>Попапы:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Спасибо за заказ!</h2>
-				<p>Буду рад хорошему отзыву.</p>
-				<p>Обращайтесь еще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мои контакты:</h2>
-				<p>Почта: <a href="mailto:email@gmail.com">husannegmatullaev21@gmail.com</a></p>
-				<p>Телефон: <a href="tel:998972190547">+998 (97) 219 05 47</a></p>
-				<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
-
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="page__main-block main-block">
+          <div class="main-block__container">
+            <div class="main-block__body">
+              <h1 class="main-block__title title" data-aos="fade-up">
+                Поставщик услуг цифровой трансформации и кибербезопасности
+              </h1>
+              <a href="/" class="button" data-aos="fade-up">На сайт</a>
+            </div>
+          </div>
+          <div class="main-block__image">
+            <img data-src="@img/main-block/01.jpg" alt="Картина с городом" />
+          </div>
+        </section>
+        <section class="page__about-us about-us">
+          <div class="about-us__container">
+            <div class="about-us__body focus-block" data-aos="fade-left">
+              <div class="about-us__content focus-block__content">
+                <p class="about-us__text">
+                  <span>Softline</span> – ведущий поставщик IT-решений и сервисов.* Мы предлагаем
+                  комплексные IT-решения, облака, программное и аппаратное обеспечение, решения
+                  по цифровой трансформации и кибербезопасности, а также широкий спектр IT-услуг.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__achievements achievements">
+          <div class="achievements__container">
+            <div class="achievements__body">
+              <article class="achievements__item" data-aos="fade-right">
+                <h4 class="achievements__title">
+                  >
+                  <span data-digits-counter="2500">30</span>
+                  лет
+                </h4>
+                <p class="achievements__description">на IT-рынке</p>
+              </article>
+              <article class="achievements__item" data-aos="fade-right">
+                <h4 class="achievements__title">
+                  <span data-digits-counter="2500">4600</span>
+                </h4>
+                <p class="achievements__description">сотрудников в России</p>
+              </article>
+              <article class="achievements__item" data-aos="fade-right">
+                <h4 class="achievements__title">
+                  <span data-digits-counter="2500">25</span>
+                </h4>
+                <p class="achievements__description">городов России</p>
+              </article>
+              <article class="achievements__item" data-aos="fade-right">
+                <h4 class="achievements__title">
+                  <span data-digits-counter="2500">2000</span>
+                  +
+                </h4>
+                <p class="achievements__description">разработчиков</p>
+              </article>
+              <article class="achievements__item" data-aos="fade-right">
+                <h4 class="achievements__title">
+                  <span data-digits-counter="2500">3000</span>
+                  +
+                </h4>
+                <p class="achievements__description">
+                  сотрудников ежегодно проходят оценку и обучение
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="page__offices offices" data-map>
+          <div class="offices__container">
+            <div class="offices__header" data-aos="fade-right">
+              <div class="offices__wrapper" data-dropdown>
+                <div class="offices__dropdown offices-dropdown">
+                  <button
+                    data-dropdown-button
+                    type="button"
+                    class="offices-dropdown__button _icon-angle-bottom"
+                  >
+                    <span>Офисы Softline</span>
+                  </button>
+                  <div data-dropdown-content class="offices-dropdown__content">
+                    <nav class="offices-dropdown__body" data-map-regions>
+                      <div class="offices-dropdown__sub-dropdown">
+                        <h4 class="offices-dropdown__sub-title">
+                          <button type="button" class="offices-dropdown__sub-button">Москва</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list"></ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">Центр</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="2,@img/maps-with-offices/center.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Воронеж
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="2,@img/maps-with-offices/center.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Ярославль
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="2,@img/maps-with-offices/center.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Белгород
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">
+                            Северо-Запад
+                          </button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="3,@img/maps-with-offices/north-west.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Санкт-Петербург
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="3,@img/maps-with-offices/north-west.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Калининград
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">Юг</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="4,@img/maps-with-offices/south.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Ростов-на-Дону
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="4,@img/maps-with-offices/south.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Краснодар
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="4,@img/maps-with-offices/south.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Волгоград
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">Волга</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="5,@img/maps-with-offices/volga.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Казань
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="5,@img/maps-with-offices/volga.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Самара
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="5,@img/maps-with-offices/volga.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Уфа
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="5,@img/maps-with-offices/volga.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Оренбург
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="5,@img/maps-with-offices/volga.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Нижний Новгород
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">Урал</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Екатеринбург
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Челябинск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Пермь
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Сургут
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Тюмень
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="6,@img/maps-with-offices/ural.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Ижевск
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">Сибирь</button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Новосибирск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Омск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Томск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Красноярск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Иркутск
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offices-dropdown__sub-dropdown" data-dropdown>
+                        <h4 class="offices-dropdown__sub-title" data-dropdown-button>
+                          <button type="button" class="offices-dropdown__sub-button">
+                            Дальний Восток
+                          </button>
+                        </h4>
+                        <ul class="offices-dropdown__sub-list" data-dropdown-content>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="8,@img/maps-with-offices/far-east.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Хабаровск
+                            </button>
+                          </li>
+                          <li class="offices-dropdown__sub-item">
+                            <button
+                              data-map-title="8,@img/maps-with-offices/far-east.jpg"
+                              type="button"
+                              class="offices-dropdown__sub-title-nav"
+                            >
+                              Владивосток
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+                <nav class="offices__nav offices-nav">
+                  <div class="offices-nav__content" data-map-areas>
+                    <button
+                      data-map-title="0,@img/maps-with-offices/all.jpg"
+                      type="button"
+                      class="offices-nav__title-nav _active"
+                    >
+                      Все
+                    </button>
+                    <button
+                      data-map-title="1,@img/maps-with-offices/moscow.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Москва
+                    </button>
+                    <button
+                      data-map-title="2,@img/maps-with-offices/center.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Центр
+                    </button>
+                    <button
+                      data-map-title="3,@img/maps-with-offices/north-west.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Северо-Запад
+                    </button>
+                    <button
+                      data-map-title="4,@img/maps-with-offices/south.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Юг
+                    </button>
+                    <button
+                      data-map-title="5,@img/maps-with-offices/volga.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Волга
+                    </button>
+                    <button
+                      data-map-title="6,@img/maps-with-offices/ural.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Урал
+                    </button>
+                    <button
+                      data-map-title="7,@img/maps-with-offices/sibir.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Сибирь
+                    </button>
+                    <button
+                      data-map-title="8,@img/maps-with-offices/far-east.jpg"
+                      type="button"
+                      class="offices-nav__title-nav"
+                    >
+                      Дальний восток
+                    </button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="offices__map" data-map-image data-aos="fade-left">
+              <img
+                data-src="@img/maps-with-offices/all.jpg"
+                alt="Карта местонахождения офисов Softline"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="page__mission mission">
+          <div class="mission__container">
+            <div class="mission__body" data-aos="zoom-in">
+              <h2 class="mission__title title title_white">Миссия Softline</h2>
+              <div class="mission__text">
+                <p>
+                  Мы помогаем организациям трансформироваться, работать эффективно и безопасно в
+                  условиях цифровой экономики.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mission__image">
+            <img src="@img/mission/01.jpg" alt="Фон сетей" />
+          </div>
+        </section>
+        <section class="page__business-areas business-areas">
+          <div class="business-areas__container">
+            <h2 class="business-areas__title title" data-aos="fade-right">Направления бизнеса</h2>
+            <div class="business-areas__body" data-spollers="767.98">
+              <article data-aos="fade-right" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">Решения Softline</button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы,
+                      торговое оборудование и проч.), разработку программных продуктов, облачных
+                      решений, решений в области информационной безопасности.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/01.jpg" alt="" />
+                </a>
+              </article>
+              <article data-aos="fade-left" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">Кибербезопасность</button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      Softline обладает всеми необходимыми государственными лицензиями для
+                      организации проектов по информационной безопасности и аттестации.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/02.jpg" alt="" />
+                </a>
+              </article>
+              <article data-aos="fade-right" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">Импортозамещение</button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      ГК Softline обладает широчайшим портфелем решений и услуг для
+                      импортозамещения, включая ПО и оборудование собственного производства.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/03.jpg" alt="" />
+                </a>
+              </article>
+              <article data-aos="fade-left" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">Облачные решения</button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      Softline использует современные облачные решения как российских, так и
+                      международных вендоров для масштабирования бизнеса своих клиентов. Подписки,
+                      услуги, трансформация.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/04.jpg" alt="" />
+                </a>
+              </article>
+              <article data-aos="fade-right" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">
+                      Цифровая трансформация и разработка ПО
+                    </button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      Softline использует современные технологи и новые возможности для увеличения
+                      производительности бизнеса заказчика. В штате ГК Softline - 2000+
+                      разработчиков, которые трансформируют ПО под нужды конкретного предприятия.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/05.jpg" alt="" />
+                </a>
+              </article>
+              <article data-aos="fade-left" class="business-areas__item business-item">
+                <div class="business-item__body">
+                  <h3 class="business-item__title" data-spoller>
+                    <button type="button" class="business-item__button">
+                      Техническая поддержка Softline
+                    </button>
+                  </h3>
+                  <div class="business-item__content">
+                    <p>
+                      200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное
+                      партнерство с 30+ мировыми производителями.
+                    </p>
+                  </div>
+                </div>
+                <a href="" class="business-item__image-ibg">
+                  <img data-src="@img/business-areas/06.jpg" alt="" />
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="page__packeges packeges">
+          <div class="packeges__container">
+            <div class="packeges__body focus-block">
+              <section class="packeges__item packege-item">
+                <div class="packege-item__body">
+                  <div class="packege-item__header">
+                    <h2 class="packege-item__title title" data-aos="fade-right">
+                      Компенсационный пакет
+                    </h2>
+                  </div>
+                  <div class="packege-item__cards">
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/bag-plus.svg" alt="Bag plus icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">ДМС</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/cake.svg" alt="Bag plus icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">Выходной в день рождения</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/phone.svg" alt="Bag plus icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">Корпоративная мобильная связь</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/dumbbell.svg" alt="Bag plus icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">Корпоративные скидки на спорт</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/navel-shaking.svg" alt="Bag plus icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">LTI</h4>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <section class="packeges__item packege-item">
+                <div class="packege-item__body">
+                  <div class="packege-item__header">
+                    <h3 class="packege-item__title title title__second" data-aos="fade-right">
+                      Программа дополнительной мотивации <span>доплата 12% от суммы</span>
+                    </h3>
+                  </div>
+                  <div class="packege-item__cards">
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/printer.svg" alt="Printer icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">Оргтехники</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/bag-plus.svg" alt="Printer icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">ДМС</h4>
+                    </article>
+                    <article class="packege-item__card" data-aos="zoom-in">
+                      <div class="packege-item__icon">
+                        <img src="@img/icons/home.svg" alt="Printer icon" />
+                      </div>
+                      <h4 class="packege-item__icon-title">Ипотеки</h4>
+                    </article>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="page__corporate-life corporate-life">
+          <div class="corporate-life__container">
+            <div class="corporate-life__slider swiper">
+              <div class="corporate-life__header">
+                <h2 class="corporate-life__title title" data-aos="fade-right">
+                  Корпоративная жизнь
+                </h2>
+                <div class="corporate-life__actions slider-actions" data-aos="fade-left">
+                  <button
+                    type="button"
+                    class="slider-actions__button slider-actions__button_prev _icon-angle-bottom"
+                  ></button>
+                  <button
+                    type="button"
+                    class="slider-actions__button slider-actions__button_next _icon-angle-bottom"
+                  ></button>
+                </div>
+              </div>
+              <div class="corporate-life__wrapper swiper-wrapper" data-aos="zoom-in">
+                <div class="corporate-life__slide swiper-slide">
+                  <a href="" class="corporate-life__image-ibg"
+                    ><img src="" alt="Softline command" data-src="@img/corporate-life/01.jpg"
+                  /></a>
+                </div>
+                <div class="corporate-life__slide swiper-slide">
+                  <a href="" class="corporate-life__image-ibg"
+                    ><img alt="Softline command" data-src="@img/corporate-life/02.jpg"
+                  /></a>
+                </div>
+                <div class="corporate-life__slide swiper-slide">
+                  <a href="" class="corporate-life__image-ibg"
+                    ><img alt="Softline command" data-src="@img/corporate-life/03.jpg"
+                  /></a>
+                </div>
+                <div class="corporate-life__slide swiper-slide">
+                  <a href="" class="corporate-life__image-ibg"
+                    ><img alt="Softline command" data-src="@img/corporate-life/04.jpg"
+                  /></a>
+                </div>
+                <div class="corporate-life__slide swiper-slide">
+                  <a href="" class="corporate-life__image-ibg"
+                    ><img alt="Softline command" data-src="@img/corporate-life/05.jpg"
+                  /></a>
+                </div>
+              </div>
+              <div class="corporate-life__pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>
